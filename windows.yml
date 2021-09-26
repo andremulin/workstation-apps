@@ -1,0 +1,30 @@
+- hosts: all
+  vars_prompt:
+          - name: ansible_user
+            prompt: Insert username
+            private: no
+          - name: ansible_password
+            prompt: Insert password
+            private: yes
+  tasks:
+  - name: Install packages
+    win_chocolatey:
+        state: latest
+        name:
+        - vscode
+        - git
+        - nvm
+        - notepadplusplus
+        - python3
+        - packer
+        - terraform
+        - vagrant
+        - awscli
+        - docker-desktop
+        - virtualbox
+        - mremoteng
+        - putty
+        - postman
+        - robo3t
+        - slack
+        - 7zip
