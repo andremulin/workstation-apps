@@ -1,5 +1,6 @@
 all:
         hosts: to_change
         vars:
-                ansible_connection: winrm
-                ansible_winrm_server_cert_validation: ignore
+                ansible_connection: ssh
+                ansible_shell_type: cmd
+                remote_temp: /tmp
